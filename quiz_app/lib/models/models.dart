@@ -47,7 +47,7 @@ class QuizQuestionDataSource {
             Option("Boyle’s law", "A"),
             Option("Gravitational force", "B"),
             Option("Surface tension", "C"),
-            Option("Viscositywrong", "D"),
+            Option("Viscosity", "D"),
           ],
           answerCode: "C"),
     ];

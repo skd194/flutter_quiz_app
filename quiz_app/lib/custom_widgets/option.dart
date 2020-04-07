@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import './../models/models.dart';
 
 class OptionWidget extends StatelessWidget {
-  final String optionText;
-  final Function onOptionSelected;
-  OptionWidget(this.optionText, {@required this.onOptionSelected});
+  final Option option;
+  final Function(String) onOptionSelected;
+  OptionWidget(this.option, {@required this.onOptionSelected});
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +14,10 @@ class OptionWidget extends StatelessWidget {
       child: RaisedButton(
         color: Colors.orange,
         child: Text(
-          optionText,
+          option.optionText,
           style: TextStyle(color: Colors.white),
         ),
-        onPressed: onOptionSelected,
+        onPressed: () => {onOptionSelected(option.optionCode)},
       ),
     );
   }
